@@ -1,0 +1,50 @@
+.contenedor {
+    z-index: 23;
+}
+
+img {
+    margin-left: 0%;
+    height: 8%;
+    position: absolute;
+    margin-bottom: 50%;
+    margin-right: 50%;
+}
+
+.box-royalmons {
+    background: rgb(11,103,11);
+    background: linear-gradient(90deg, rgba(11,103,11,1) 0%, rgba(34,173,41,1) 35%, rgba(60,235,53,1) 100%); 
+}
+.box-bolsa {
+    background: rgb(230,235,53);
+    background: linear-gradient(90deg, rgba(230,235,53,1) 0%, rgba(160,172,34,1) 35%, rgba(101,103,11,1) 100%); 
+}
+.box-mapa {
+    background: rgb(63,11,103);
+    background: linear-gradient(90deg, rgba(63,11,103,1) 0%, rgba(120,34,173,1) 35%, rgba(144,53,235,1) 100%); 
+}    
+.box-royaldex {
+    background: rgb(255,0,0);
+    background: linear-gradient(90deg, rgba(255,0,0,0.9135855025603992) 0%, rgba(170,31,31,1) 35%, rgba(111,10,10,1) 100%); 
+}
+.box-medallas {
+    background: rgb(10,110,111);
+    background: linear-gradient(90deg, rgba(10,110,111,1) 0%, rgba(31,169,170,1) 35%, rgba(47,222,223,1) 100%); 
+}
+.box-guardar {
+    background: rgb(15,7,152);
+    background: linear-gradient(90deg, rgb(0, 212, 255) 0%, rgba(61,100,213,1) 35%,  rgba(15,7,152,1) 100%);
+}
+.contenedor-menu {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(75, 75, 75);
+    z-index: 51;
+}
+.navbar {
+    height: 60px;
+}
+.content-comp {
+    overflow-y: auto;
+    height: calc(100vh - 60px);
+}

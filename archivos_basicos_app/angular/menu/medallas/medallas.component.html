@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row divMedallas">
+      <div class="col col-md-4 mb-4" *ngFor="let medalla of medallasArray">
+        <div class="">
+          <img [src]="getURLImageMedalla(medalla)" class="card-img-top" [class.filter-oscuro]="!tengoMedalla(medalla)"  alt="Medalla">
+          <!-- <div class="card-body">
+            <h5 class="card-title">Medalla {{ medalla }}</h5>
+            <p class="card-text">Descripción de la medalla {{ medalla }}</p>
+            <p *ngIf="tengoMedalla(medalla)" class="text-success">Has obtenido esta medalla</p>
+            <p *ngIf="!tengoMedalla(medalla)" class="text-danger">Aún no has obtenido esta medalla</p>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  

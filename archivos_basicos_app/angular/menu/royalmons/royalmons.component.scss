@@ -1,0 +1,60 @@
+$colorFondoOpciones: #5e5e9e;
+$colorFondoOpcionesHover: #7878cc;
+
+.opciones-royalmon {
+    position: fixed;
+    bottom: 30px;
+    right: 0;
+    text-align: right;
+  }
+  
+  .opciones-royalmon div {
+    position: relative;
+    padding: 20px;
+    background: #5e5e9e;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 19px;
+    cursor: pointer;
+  }
+  
+  .opciones-royalmon div::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -9px;
+    width: 0;
+    height: 0;
+    border-top: 34px solid transparent;
+    border-bottom: 34px solid transparent;
+    border-right: 10px solid $colorFondoOpciones;
+  }
+
+  .opciones-royalmon div:hover {
+    background: $colorFondoOpcionesHover;
+  }
+  
+.opciones-royalmon div:hover::before {
+    border-right-color: $colorFondoOpcionesHover;
+  }
+  .fondoDatos, .datos {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+  }
+  .fondoDatos {
+    background-color: rgba(0, 0, 0, 0.473);
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+  }
+  .datos {
+    position: fixed;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+  }

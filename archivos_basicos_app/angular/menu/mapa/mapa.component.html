@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="d-flex flex-column align-items-center">
+    <ng-container *ngFor="let area of areas; let last = last">
+      <div [class.areaNoPrincipal]="area.tipo !== 'principal'" [class.areaSelecionada]="areaSelecionada && areaSelecionada.nombre === area.nombre" >
+        <div class="circle-container position-relative">
+          <div *ngIf="royalmonCambiarArea && areaSelecionada && areaSelecionada.nombre === area.nombre" class="divRoyalmonCambiarArea">
+            <p>{{getMensajeCambiarArea()}}</p>
+            <app-royalmon [royalmon]="royalmonCambiarArea.royalmonCapturado.royalmon" [margin]="'0'" ></app-royalmon>
+            <button type="button" class="btnCambiarArea" (click)="cambiarArea()" >Usar {{this.nombreAtaqueCambiarArea}}</button>
+          </div>
+          <div class="circle d-flex align-items-center justify-content-center text-center" 
+          (click)="setAreaSeleccionada(area)"
+            [style.backgroundImage]="getURLImageRutaBaseArea(area)">
+            {{area.nombre}}
+          </div>
+          <div class="areaDesc">{{ heVisitadoArea(area) ? area.descripcion : '???'}}</div>
+        </div>
+        <div class="line" *ngIf="!last"></div>
+      </div>
+    </ng-container>
+  </div>
+</div>
+<div class="infoMapa" [class.ocultarInfoMapa]="infoOculta"  (click)="toggleInfoMapa()" >
+  <p>
+    <span class="fas fa-info-circle fa-lg spanInfo"></span>
+    <span class="tituloInfo">Puedes desplazarte a otras zonas rápidamente si</span>
+  </p>
+  <ul>
+    <li>Tienes un royalmon con vida en tu equipo que tenga {{nombreAtaqueCambiarArea}}</li>
+    <li>Si actualmente no estás en un sitio cerrado, como dentro de una casa, etc</li>
+    <li>Si ya has visitado esa zona por lo menos una vez</li>
+  </ul>
+</div>

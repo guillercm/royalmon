@@ -1,0 +1,79 @@
+<div class="container divRoyaldex">
+    <div class="row d-flex">
+      <div class="col-md-4 w-100" *ngFor="let royalmon of royalmons" >
+        <div class="card mb-3" [class.expanded]="royalmon === royalmonSeleccionado" >
+          <div class="card-body divRoyalmon">
+            <div class="row align-items-center" >
+              <div class="col-md-1">
+
+              </div>
+              <div class="col-md-2 colRoyalmonIco">
+                <app-royalmon [royalmon]="royalmon" (click)="royalmon === royalmonSeleccionado && toggleIco()" [animation]="(royalmon === royalmonSeleccionado ? animacion_royalmon_seleccionado : 'batalla_rival')" [size]="(royalmon === royalmonSeleccionado ? 120 : 80) + 'px'" [filterOscuro]="!desbloqueado(royalmon)"  ></app-royalmon>
+              </div>
+              <div class="col-md-1">
+                <p>{{ royalmon.num_royaldex }}</p>
+              </div>
+              <div class="col-md-7">
+                <p>{{ desbloqueado(royalmon) ? royalmon.nombre : '?????' }}</p>
+              </div>
+              <div class="col-md-1 align-self-start" style="cursor: pointer;" *ngIf="desbloqueado(royalmon)" (click)="toggleInfo(royalmon)">
+                <div class="fas fa-chevron-down" [class.fa-chevron-down]="royalmon !== royalmonSeleccionado"  [class.fa-chevron-up]="royalmon === royalmonSeleccionado" ></div>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-md-1">
+
+              </div>
+              <div class="col-md-10">
+                <div class="info" *ngIf="desbloqueado(royalmon)" [hidden]="royalmon !== royalmonSeleccionado">
+                  <app-icono-tipo [tipo]="royalmon.tipo_1" style="margin-right: 2px;"></app-icono-tipo>
+                  <app-icono-tipo [tipo]="royalmon.tipo_2"></app-icono-tipo>
+                  <p style="margin-bottom: 10px;">{{ royalmon.descripcion }}</p>
+                  <div class="row mt-2">
+                    <div class="col">
+                      <div class="div-stat">
+                        <div>Ataque</div>
+                          <div class="div-fondo-stat">
+                            <div [style.width.%]="(royalmon.stat_ataque / 8) * 100"
+                                     
+                                     class="background-ataque"></div>
+                            </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="row mt-1">
+                      <div class="col">
+                          <div class="div-stat">
+                              <div>Defensa</div>
+                              <div class="div-fondo-stat">
+                                  <div [style.width.%]="(royalmon.stat_defensa / 8) * 100"
+                                      
+                                      class="background-defensa"></div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="row mt-1">
+                      <div class="col">
+                          <div class="div-stat">
+                              <div>Vida</div>
+                              <div class="div-fondo-stat">
+                                  <div [style.width.%]="(royalmon.stat_vida / 8) * 100"
+                                      
+                                      class="background-vida"></div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-1">
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

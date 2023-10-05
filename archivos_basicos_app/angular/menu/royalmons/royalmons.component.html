@@ -1,0 +1,18 @@
+<app-cambiar-royalmon [seleccionarRoyalmon]="seleccionarRoyalmon" [listaUsuarioRoyalmon]="listaUsuarioRoyalmon" [mostrarTitulo]="false" ></app-cambiar-royalmon>
+<div class="datos" *ngIf="mostrarDatos">
+    <app-info-royalmon [royalmon]="royalmonSeleccionado" [esMenu]="true" ></app-info-royalmon>
+</div>
+<div class="fondoDatos" (click)="mostrarDatos = false; royalmonSeleccionado = null" *ngIf="mostrarDatos"></div>
+<div class="opciones-royalmon" *ngIf="royalmonSeleccionado">
+    <div (click)="moverRoyalmonPrimeraPosicion()" *ngIf="royalmonSeleccionado.index_guardado">MOVER A {{ nombreRoyalmon | uppercase }} A LA PRIMERA POSICIÓN</div>
+    <div (click)="mostrarDatos = true">DATOS DE {{ nombreRoyalmon | uppercase }}</div>
+    <div *ngIf="royalmonSeleccionado.vida_restante >= 1" (click)="establecerAcompanante(!royalmonSeleccionado.es_acompanante)">
+        <ng-container *ngIf="royalmonSeleccionado.es_acompanante" >
+            METER A {{ nombreRoyalmon | uppercase }} EN LA ROYALBALL
+        </ng-container>
+        <ng-container *ngIf="!royalmonSeleccionado.es_acompanante" >
+            SACAR A {{ nombreRoyalmon | uppercase }} DE LA ROYALBALL
+        </ng-container>
+        
+    </div>
+</div>

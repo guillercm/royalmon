@@ -1,0 +1,44 @@
+.divRoyaldex {
+    margin-top: 20px;
+}
+.divRoyalmon {
+    background-color: rgb(25, 24, 24);
+    color: rgb(210, 192, 192);
+    font-weight: bold;
+    font-size: 20px;
+}
+.divRoyalmon p {
+    margin: 0;
+}
+.colRoyalmonIco {
+    background-color: rgb(135, 126, 126);
+    border-radius: 12px;
+}
+
+
+.div-fondo-stat {
+    position: relative;
+    width: 100%;
+    height: 20px;
+    background-color: lightgray;
+  }
+  .div-fondo-stat div {
+    position: relative;
+    height: 100%;
+    background-color: #e5923c;
+  }
+  .div-fondo-stat::before, .div-fondo-stat::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background-color: lightgray;
+  }
+  .div-fondo-stat::before {
+    left: 66%;
+    z-index: 1;
+  }
+  .div-fondo-stat::after {
+    right: 66%;
+  }

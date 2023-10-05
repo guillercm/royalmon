@@ -1,0 +1,7 @@
+.container {
+    max-width: 720px !important;
+}
+.col {
+    width: calc(100% / 4) !important;
+    flex: 0 0 auto !important;
+}
