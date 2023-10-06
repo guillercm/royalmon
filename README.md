@@ -61,5 +61,4 @@ Descarga la prueba del juego aquí:
 
 Para ver algunos archivos de la aplicación:
 
-- Aunque no subo el código completo, puedes ver aquí algunos ficheros que usa la aplicación:
-- <a target="_blank" href="archivos_basicos_app" >VER ARCHIVOS</a>
+- Aunque no subo el código completo, puedes ver aquí algunos ficheros que usa la aplicación: <a target="_blank" href="archivos_basicos_app" >VER ARCHIVOS</a>
