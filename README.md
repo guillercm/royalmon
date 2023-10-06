@@ -63,6 +63,3 @@ Para ver algunos archivos de la aplicación:
 
 - Aunque no subo el código completo, puedes ver aquí algunos ficheros que usa la aplicación:
 - <a target="_blank" href="archivos_basicos_app" >VER ARCHIVOS</a>
-
-También dejaré este gameplay del juego:
-<a target="_blank" href="gameplay.mp4" >VÍDEO DEL GAMEPLAY</a>
